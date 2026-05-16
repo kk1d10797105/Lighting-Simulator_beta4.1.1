@@ -405,14 +405,6 @@ function draw(){
       ctx.save(); ctx.beginPath();
       ctx.moveTo(tx-4,botY); ctx.lineTo(tx-spread,topY); ctx.lineTo(tx+spread,topY); ctx.lineTo(tx+4,botY);
       ctx.closePath(); ctx.fillStyle=grd; ctx.fill();
-      // spot circle
-      const cr=52*v*.6;
-      const cg=ctx.createRadialGradient(tx,topY,0,tx,topY,cr);
-      cg.addColorStop(0,`rgba(${R},${G},${B},${v*.9})`);
-      cg.addColorStop(.4,`rgba(${R},${G},${B},${v*.45})`);
-      cg.addColorStop(1,`rgba(${R},${G},${B},0)`);
-      ctx.beginPath(); ctx.arc(tx,topY,cr,0,Math.PI*2); ctx.fillStyle=cg; ctx.fill();
-      ctx.restore();
 
     } else if(d.type==='side-l'){
       const sy=d.row*H, len=W*.60*(0.45+v*.55), sp=len*.42;
