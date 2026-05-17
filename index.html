@@ -396,7 +396,7 @@ function draw(){
     if(d.type==='front'||d.type==='back'){
       const tx=d.sx*W, topY=d.ey*H, botY=H+10;
       // Wider spread for front lights
-      const spreadMult = d.type==='front' ? 0.72 : 0.60;
+      const spreadMult = d.type==='front' ? 0.85 : 0.85;
       const spread=(botY-topY)*spreadMult*v;
       const grd=ctx.createLinearGradient(tx,botY,tx,topY);
       grd.addColorStop(0,`rgba(${R},${G},${B},0)`);
